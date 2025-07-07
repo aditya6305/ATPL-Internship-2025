@@ -9,12 +9,13 @@ public class ValidNumber {
         }
     }
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         try{
-        checkPositive(10);
-        checkPositive(-5);
+        checkPositive(sc.nextInt());
     }
     catch(Exception e){
         System.out.println("Exception occured"+e.getMessage());
     }
+    sc.close();
 }
 }
