@@ -3,17 +3,18 @@ public class StackEx {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter no of elements to push:");
-        int n=sc.nextInt();
-        Stack<Integer> s=new Stack<>();
-        for(int i=0;i<n;i++){
-            s.push(sc.nextInt());
+        int size=sc.nextInt();
+        Stack<Integer> stack=new Stack<>();
+        for(int initial=0;initial<size;initial++){
+            stack.push(sc.nextInt());
         }
-        System.out.println("Stack After pushing "+n+" Elements into it:"+s);
+        System.out.println("Stack After pushing "+size+" Elements into it:"+stack);
         System.out.println("Enter how many elements to be popped:");
         int pop=sc.nextInt();
-        for(int i=0;i<pop;i++){
-            s.pop();
+        for(int inital=0;inital<pop;inital++){
+            stack.pop();
         }
-        System.out.println(s);  
+        System.out.println(stack);  
+        sc.close();
     }
 }

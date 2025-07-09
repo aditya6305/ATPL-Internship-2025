@@ -3,9 +3,9 @@ public class LinkedListEx {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter no of elements in the list");
-        int n=sc.nextInt();
+        int size=sc.nextInt();
         LinkedList<Integer> ll=new LinkedList<>();
-        for(int i=0;i<n;i++){
+        for(int initial=0;initial<size;initial++){
             ll.add(sc.nextInt());
     }
     ll.addFirst(5);
