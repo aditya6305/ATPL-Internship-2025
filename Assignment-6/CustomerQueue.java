@@ -1,6 +1,6 @@
-// package com.aaslin.java.assignments.assignment6;
+package com.aaslin.java.assignments.assignment6;
 import java.util.*;
-class Customer {
+public class CustomerQueue {
 		Queue<String> queue=new LinkedList<>();
 		Scanner scanner = new Scanner(System.in);
 		public void service() {
@@ -52,10 +52,8 @@ public void nextCustomer() {
 		System.out.println("No customer is in the queue");
 	}
 }
-}
-public class CustomerQueue{
 public static void main(String[] args) {
-	Customer customerqueue = new Customer();
+	CustomerQueue customerqueue = new CustomerQueue();
 	customerqueue.service();
 }
 }
