@@ -24,5 +24,6 @@ public class SystemLogin{
         catch(Exception e){
             System.out.println("Login failed because:"+e.getMessage());
         }
+        sc.close();
     }
 }

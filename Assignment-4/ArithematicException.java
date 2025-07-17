@@ -15,4 +15,5 @@ public class ArithematicException {
             System.out.println("It Always Executed");
         }
         }
+        sc.close();
     }

@@ -19,5 +19,6 @@ public class IOExceptionExample {
         } catch (ArithmeticException e) {
             System.out.println("Unchecked Exception Caught:"+e);
         }
+        sc.close();
     }
 }
