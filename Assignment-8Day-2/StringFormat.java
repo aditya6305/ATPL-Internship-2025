@@ -35,7 +35,7 @@ public class StringFormat {
             FileWriter writer = new FileWriter("students.txt");
             writer.write(String.format(format, "Name", "Age", "Department", "GPA"));
 
-            for (int iterate = 0; iterate < n; iterate++) {
+            for (int iterate = 0; iterate < noOfStudent; iterate++) {
                 writer.write(String.format(format,
                         names.get(iterate),
                         ages.get(iterate),

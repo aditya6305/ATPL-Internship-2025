@@ -1,5 +1,3 @@
-Name                          Age       Department      Gpa       
-sdsd                          21        cfs             21.0      
-
-cs                            21        dwd             21.0      
-
+Name                Age   Department  GPA  
+aditya              21    cse         21.00
+wfwhrhjwrtgreswdaw  21    cewfdwfwe   21.00
