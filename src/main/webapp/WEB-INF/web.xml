@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.aaslin.servlet.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+    
+ <servlet>
+   <servlet-name>UserInsertServlet</servlet-name>
+   <servlet-class>com.aaslin.servlet.UserInserServlet</servlet-class>
+</servlet>
+
+	<servlet-mapping>
+   <servlet-name>UserInsertServlet</servlet-name>
+   <url-pattern>/usersinfo</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+   <servlet-name>ShowUsersServlet</servlet-name>
+   <servlet-class>com.aaslin.servlet.ShowUsersServlet</servlet-class>
+</servlet>
+
+	<servlet-mapping>
+   <servlet-name>ShowUsersServlet</servlet-name>
+   <url-pattern>/showinfo</url-pattern>
+</servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.aaslin.servlet.AdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    
+    <servlet>
+        <servlet-name>AdminInsertServlet</servlet-name>
+        <servlet-class>com.aaslin.filter.AdminInsertServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminInsertServlet</servlet-name>
+        <url-pattern>/adminInsert</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>AdminStatus</servlet-name>
+        <servlet-class>com.aaslin.service.AdminStatus</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminStatus</servlet-name>
+        <url-pattern>/adminstatus</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>AdminDeleteServlet</servlet-name>
+        <servlet-class>com.aaslin.servlet.AdminDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminDeleteServlet</servlet-name>
+        <url-pattern>/deleteadmin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AdminActive</servlet-name>
+        <servlet-class>com.aaslin.servlet.AdminActive</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminActive</servlet-name>
+        <url-pattern>/aciveadmins</url-pattern>
+    </servlet-mapping>
+    
+        <servlet>
+        <servlet-name>OrderInsertServlet</servlet-name>
+        <servlet-class>com.aaslin.servlet.OrderInsertServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderInsertServlet</servlet-name>
+        <url-pattern>/orderinsert</url-pattern>
+    </servlet-mapping>
+    
+    <listener>
+    	<listener-class> com.aaslin.listener.OrderLogListener </listener-class>
+    </listener>
+
+	<servlet>
+        <servlet-name>ShowOrders</servlet-name>
+        <servlet-class>com.aaslin.servlet.ShowOrders</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowOrders</servlet-name>
+        <url-pattern>/showorders</url-pattern>
+    </servlet-mapping>
+		
+
+</web-app>
