@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+  <!--    <bean id="studentBean" class="com.aaslin.assignments.spring.Student"  >
+	<property name = "name" value = "Aditya"/>
+	</bean>
+	<bean id="collegeBean" class="com.aaslin.assignments.spring.College">
+    <property name = "collegeName" value = "Lendi"/>
+    </bean>
+    <context:annotation-config/>
+    <bean id = "teacher" class = "com.aaslin.assignments.spring.Teacher" init-method = "teacherInit" destroy-method = "teacherDestroy" /> -->
+    
+    <bean id = "teacher" class = "com.aaslin.assignments.spring.Teacher"/>
+
+    
+   <!--  <bean id = "courseBean" class = "com.aaslin.assignments.spring.Course">
+    	<constructor-arg value = "Spring"/>
+    	</bean>
+	<bean id = "facultyBean" class = "com.aaslin.assignments.spring.Faculty">
+	<constructor-arg ref = "courseBean"/>
+	</bean>   
+	-->
+	
+<!--  	<bean id ="bookBean" class = "com.aaslin.assignments.spring.Book ">
+	<property name ="bookTitle" value = "Spring"/>
+	</bean>
+	<bean id = "libraryBean" class = "com.aaslin.assignments.spring.Library ">
+	<property name="book" ref = "bookBean"/>
+	</bean>
+	-->
+	
+  	<!-- <bean id = "facultyMulDepBean" class = "com.aaslin.assignments.spring.FacultyMulDep">
+	<constructor-arg value = "Aditya"/>
+	</bean>
+	
+	<bean id = "libraryMulDepBean" class = "com.aaslin.assignments.spring.LibraryMulDep">
+	<property name = "bookName" value = "Spring framework book"/>
+	</bean>
+	
+	<bean id = "universityBean" class = "com.aaslin.assignments.spring.University">
+	<constructor-arg ref = "facultyMulDepBean"/>
+	<property name = "library" ref = "libraryMulDepBean"/>
+	</bean>
+	-->
+</beans>
