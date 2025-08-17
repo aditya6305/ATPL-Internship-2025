@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+   
+ <bean id="student" class="com.aaslin.BeanInjections.Student">
+   	<constructor-arg value="1"></constructor-arg>
+   	<constructor-arg value="jerusha"></constructor-arg>
+   </bean>
+    
+    <bean id="college" class="com.aaslin.BeanInjections.College">
+    <property name = "collegeName" value="VIET"></property>
+   	<constructor-arg  ref="student"></constructor-arg>
+   </bean>
+   
+   <bean id="employee" class="com.aaslin.BeanInjections.Employee">
+   <property name="empID" value="1"></property>
+   <property name="empName" value="elisha"></property>
+   </bean>
+  
+  <!-- Multiple Dependency Injection -->
+   <bean id="department" class="com.aaslin.BeanInjections.Department">
+   <constructor-arg ref="employee"></constructor-arg>
+   <property name="deptName" value="HR"></property>
+   </bean>
+   
+   <bean id="teacher" class="com.aaslin.BeanLifeCycle.TeacherThroughXml" init-method="init" destroy-method="destroy"/>
+   <bean id = "teacherInterface" class="com.aaslin.BeanLifeCycle.TeacherThroughInterfaces"/> 
+   <bean class = "com.aaslin.BeanScope.BeanScopeSingleton" scope = "singleton"/>
+    <bean class = "com.aaslin.BeanScope.BeanScopePrototype" scope = "prototype"/>
+	
+	
+</beans>
