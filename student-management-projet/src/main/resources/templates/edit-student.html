@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student - Student Management
+    </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            width: auto;
+            padding: initial;
+            margin: 0;
+            box-sizing: initial;
+        }
+        input[readonly] {
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .back-btn {
+            background-color: #6c757d;
+            margin-bottom: 20px;
+            width: auto;
+            padding: 8px 15px;
+        }
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a th:href="@{/admin}" class="back-btn" style="text-decoration: none; color: white; display: inline-block;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        
+        <h2>Edit Student</h2>
+        
+        <form th:action="@{/admin/edit}" method="post" th:object="${student}">
+            <input type="hidden" name="id" th:value="${student.id}">
+            
+            <div class="form-group">
+                <label for="id">Student ID:</label>
+                <input type="text" id="id" th:value="${student.id}" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="rollNo">Roll Number:</label>
+                <input type="text" id="rollNo" name="rollNo" th:value="${student.rollNo}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" th:value="${student.name}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" th:value="${student.age}" min="17" max="30" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="grade">Grade:</label>
+                <select id="grade" name="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="A+" th:selected="${student.grade == 'A+'}">A+</option>
+                    <option value="A" th:selected="${student.grade == 'A'}">A</option>
+                    <option value="B+" th:selected="${student.grade == 'B+'}">B+</option>
+                    <option value="B" th:selected="${student.grade == 'B'}">B</option>
+                    <option value="C" th:selected="${student.grade == 'C'}">C</option>
+                    <option value="D" th:selected="${student.grade == 'D'}">D</option>
+                    <option value="E" th:selected="${student.grade == 'E'}">E</option>
+                    <option value="F" th:selected="${student.grade == 'F'}">F</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" th:value="${student.mobile}" pattern="[0-9]{10}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" th:value="${student.password}" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="isActive">Active Status: <input type="checkbox" id="isActive" name="isActive" th:checked="${student.isActive}"></label>
+                
+            </div>
+            
+            <button type="submit">Update Student</button>
+        </form>
+    </div>
+</body>
+</html>
