@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student - Student Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .back-btn {
+            background-color: #6c757d;
+            margin-bottom: 20px;
+            width: auto;
+            padding: 8px 15px;
+        }
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a th:href="@{/admin}" class="back-btn" style="text-decoration: none; color: white; display: inline-block;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        
+        <h2>Add New Student <i class="fas fa-user"></i></h2>
+        
+        <form th:action="@{/admin/add}" method="post" th:object="${student}">
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" th:field="*{name}" placeholder="Enter student name" required>
+                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" th:field="*{age}" min="17" max="30" placeholder="Enter age" required>
+                <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="grade">Grade:</label>
+                <select id="grade" name="grade" th:field="*{grade}" required>
+                    <option value="">Select Grade</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option> 
+                    <option value="F">F</option>
+                </select>
+                <span th:if="${#fields.hasErrors('grade')}" th:errors="*{grade}" class="error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" th:field="*{mobile}" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
+                <span th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}" class="error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" th:field="*{password}" placeholder="Enter password (min 8 characters)" minlength="8" required>
+                <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></span>
+            </div>
+            
+            <button type="submit">Add Student</button>
+        </form>
+    </div>
+</body>
+</html>
