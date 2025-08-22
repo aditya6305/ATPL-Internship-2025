@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Entry</title>
+</head>
+<body>
+    <h1>Student Marks Entry Form</h1>
+    
+    <form action="#">
+        <h2>Student Information</h2>
+        <table>
+            <tr>
+                <td><label for="rollNumber">Roll Number:</label></td>
+                <td><input type="text" id="rollNumber" name="rollNumber" required></td>
+            </tr>
+            <tr>
+                <td><label for="studentName">Student Name:</label></td>
+                <td><input type="text" id="studentName" name="studentName" required></td>
+            </tr>
+            <tr>
+                <td><label for="semester">Semester:</label></td>
+                <td>
+                    <select id="semester" name="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">I Semester</option>
+                        <option value="2">II Semester</option>
+                        <option value="3">III Semester</option>
+                        <option value="4">IV Semester</option>
+                        <option value="5">V Semester</option>
+                        <option value="6">VI Semester</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Subject Marks</h2>
+        <table border="1">
+            <tr>
+                <th>Subject</th>
+                <th>Maximum Marks</th>
+                <th>Marks Obtained</th>
+            </tr>
+            <tr>
+                <td>Mathematics</td>
+                <td>100</td>
+                <td><input type="number" name="math" min="0" max="100" required></td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>100</td>
+                <td><input type="number" name="physics" min="0" max="100" required></td>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td>100</td>
+                <td><input type="number" name="chemistry" min="0" max="100" required></td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>100</td>
+                <td><input type="number" name="english" min="0" max="100" required></td>
+            </tr>
+            <tr>
+                <td>Computer Science</td>
+                <td>100</td>
+                <td><input type="number" name="computer" min="0" max="100" required></td>
+            </tr>
+        </table>
+
+        <br>
+        <input type="submit" value="Submit Marks">
+        <input type="reset" value="Clear All">
+    </form>
+</body>
+</html>

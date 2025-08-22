@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+</head>
+<body>
+    <h1>Flight Search</h1>
+    
+    <form action="#">
+        <table>
+            <tr>
+                <td><label for="from">From:</label></td>
+                <td>
+                    <select id="from" name="from" required>
+                        <option value="">Select Departure City</option>
+                        <option value="DEL">Delhi (DEL)</option>
+                        <option value="BOM">Mumbai (BOM)</option>
+                        <option value="BLR">Bangalore (BLR)</option>
+                        <option value="CHN">Chennai (MAA)</option>
+                        <option value="CKT">Kolkata (CCU)</option>
+                        <option value="HYD">Hyderabad (HYD)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="to">To:</label></td>
+                <td>
+                    <select id="to" name="to" required>
+                        <option value="">Select Destination City</option>
+                        <option value="DEL">Delhi (DEL)</option>
+                        <option value="BOM">Mumbai (BOM)</option>
+                        <option value="BLR">Bangalore (BLR)</option>
+                        <option value="CHN">Chennai (MAA)</option>
+                        <option value="CKT">Kolkata (CCU)</option>
+                        <option value="HYD">Hyderabad (HYD)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="departure">Departure Date:</label></td>
+                <td><input type="date" id="departure" name="departure" required></td>
+            </tr>
+            <tr>
+                <td><label for="return">Return Date:</label></td>
+                <td><input type="date" id="return" name="return"></td>
+            </tr>
+            <tr>
+                <td><label for="adults">Adults:</label></td>
+                <td>
+                    <select id="adults" name="adults" required>
+                        <option value="1">1 Adult</option>
+                        <option value="2">2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4 Adults</option>
+                        <option value="5">5 Adults</option>
+                        <option value="6">6 Adults</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="children">Children:</label></td>
+                <td>
+                    <select id="children" name="children">
+                        <option value="0">0 Children</option>
+                        <option value="1">1 Child</option>
+                        <option value="2">2 Children</option>
+                        <option value="3">3 Children</option>
+                        <option value="4">4 Children</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="class">Class:</label></td>
+                <td>
+                    <select id="class" name="class">
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first">First Class</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Search Flights">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

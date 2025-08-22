@@ -1,0 +1,5 @@
+Create HTML page with title as “AASLIN Internship” and your name as heading and describe about you as paragraph.
+Create new feature branch in git and commit Assignment 1 it.
+Create HTML page with name assignment.html and it should have all interns names. [Note: Each intern should only add their name to existing assignment.html]
+Create HTML page to display your name using different html tags
+Learn tags and its attributes and create example of each tag you learnt
