@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Pricing Table</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .pricing-box {
+      width: 200px;
+      display: inline-block;
+      vertical-align: top;
+      border: 1px solid #333;
+      margin: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .pricing-box h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .pricing-box .price {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .pricing-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pricing-box ul li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-box">
+    <h2>Basic</h2>
+    <div class="price">$9/mo</div>
+    <ul>
+      <li>✔ Feature 1</li>
+      <li>✔ Feature 2</li>
+    </ul>
+  </div>
+
+  <div class="pricing-box">
+    <h2>Standard</h2>
+    <div class="price">$19/mo</div>
+    <ul>
+      <li>✔ Feature 1</li>
+      <li>✔ Feature 2</li>
+      <li>✔ Feature 3</li>
+    </ul>
+  </div>
+
+  <div class="pricing-box">
+    <h2>Premium</h2>
+    <div class="price">$29/mo</div>
+    <ul>
+      <li>✔ All Features</li>
+    </ul>
+  </div>
+</body>
+</html>

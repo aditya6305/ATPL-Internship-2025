@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      color: #333;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 2px solid #000;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Section Styling */
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    /* About */
+    .about p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Projects */
+    .projects {
+      display: flex;
+      gap: 20px;
+    }
+
+    .project-card {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 120px;
+      background: #eee;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .project-card p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* Contact */
+    .contact p {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #fff;
+      padding: 15px;
+      border-top: 2px solid #000;
+      font-size: 13px;
+      color: #555;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <p>Frontend Developer</p>
+  </header>
+
+  <div class="container">
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m a passionate frontend developer who enjoys building clean and user-friendly web interfaces. 
+        I specialize in HTML, CSS, and JavaScript, and I love turning ideas into real-life applications. 
+        
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x120" alt="Project 1">
+          <h3>Project One</h3>
+          <p>
+            This project is a static webpage showcasing box model concepts and basic layouts using HTML and CSS.
+          </p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x120" alt="Project 2">
+          <h3>Project Two</h3>
+          <p>
+            A responsive card design using margin, padding, border-radius, and hover effects to demonstrate interactivity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>Email: yourname@example.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </section>
+  </div>
+
+ 
+</body>
+</html>
