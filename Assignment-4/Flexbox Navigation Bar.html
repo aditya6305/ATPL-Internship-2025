@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Navigation Bar</title>
+  
+  <style>
+   
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar {
+      display: flex;                        
+      justify-content: space-evenly;       
+      align-items: center;                 
+      background-color: #333;              
+      padding: 15px 0;                      
+    }
+
+    .navbar a {
+      color: white;                         
+      text-decoration: none;                
+      font-weight: 600;                    
+      padding: 10px 20px;                  
+      border-radius: 5px;                   
+      transition: background-color 0.3s;    
+    }
+
+    .navbar a:hover {
+      background-color: #555;              
+    }
+
+    .navbar a.active {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#" class="active">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+</body>
+</html>

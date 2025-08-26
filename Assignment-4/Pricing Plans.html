@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+    }
+
+    .pricing-section {
+      background-color: #f8f9fa;  
+      padding: 40px 0;
+    }
+
+    .pricing-container {
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      padding: 30px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card .price {
+      font-size: 24px;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    .card button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-section">
+    <div class="pricing-container">
+      <div class="card">
+        <h3>Basic</h3>
+        <p class="price">$19/mo</p>
+        <button>Choose Plan</button>
+      </div>
+      <div class="card">
+        <h3>Standard</h3>
+        <p class="price">$39/mo</p>
+        <button>Choose Plan</button>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p class="price">$79/mo</p>
+        <button>Choose Plan</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
