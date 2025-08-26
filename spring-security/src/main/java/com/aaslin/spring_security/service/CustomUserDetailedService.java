@@ -13,7 +13,7 @@ public class CustomUserDetailedService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         if ("admin".equals(username)) {
-            return User.withUsername("admin")
+            return User.withUsername("admin1")
                     .password("{noop}admin123") 
                     .roles("ADMIN")
                     .build();
@@ -23,7 +23,7 @@ public class CustomUserDetailedService implements UserDetailsService {
       then it will redriected to admin controller and prints a message "Hello Admin! You have admin access".
       */ 
         } else if ("user".equals(username)) {
-            return User.withUsername("user")
+            return User.withUsername("user1")
                     .password("{noop}user123")
                     .roles("USER")
                     .build();

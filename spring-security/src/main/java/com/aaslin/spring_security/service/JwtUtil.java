@@ -13,7 +13,7 @@ public class JwtUtil {
 
     private final String SECRET = "mysecretkeymysecretkeymysecretkey";
 
-    private final long EXPIRATION = 1000 * 60 * 60;
+    private final long EXPIRATION = 2000000 * 60 * 60;
 
     private final Key key = Keys.hmacShaKeyFor(SECRET.getBytes());
 
