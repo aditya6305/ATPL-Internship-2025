@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JWT Token</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Your JWT Token</h2>
+  <pre id="tokenDisplay"></pre>
+  <button onclick="logout()">Logout</button>
+  <button onclick="goToUser()">Go to User API</button>
+  <button onclick="goToAdmin()">Go to Admin API</button>
+
+  <script>
+    // Display stored token
+    let token = localStorage.getItem("jwtToken");
+    document.getElementById("tokenDisplay").textContent = token || "No token found. Please login.";
+
+    function logout() {
+      localStorage.removeItem("jwtToken");
+      window.location.href = "login.html";
+    }
+
+    async function goToUser() {
+      let res = await fetch("/user", {
+        headers: { "Authorization": "Bearer " + token }
+      });
+      alert(await res.text());
+    }
+
+    async function goToAdmin() {
+      let res = await fetch("/admin", {
+        headers: { "Authorization": "Bearer " + token }
+      });
+      alert(await res.text());
+    }
+  </script>
+</body>
+</html>

@@ -24,14 +24,16 @@ public class SecureConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf.disable())
+        http.csrf(csrf -> csrf.disable()) // Here we use jwt not session cookies so I disabled csrf.
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login").permitAll()
-                        .requestMatchers("/admin").hasRole("ADMIN")
-                        .requestMatchers("/user").hasAnyRole("USER", "ADMIN")
-                        .anyRequest().authenticated()
+                        .requestMatchers("/login", "/register").permitAll()
+                        .requestMatchers("/index.html","/login.html","/token.html","/styles.css","/script.js").permitAll()       
+                        .requestMatchers("/admin").hasAnyRole("ADMIN")
+                        .requestMatchers("/user").hasAnyRole("USER","ADMIN")
+                        .anyRequest().authenticated()                       
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        //stateless means no session is used here only jwt is used.
 
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
@@ -39,7 +41,7 @@ public class SecureConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        return new BCryptPasswordEncoder();  
     }
 
     @Bean

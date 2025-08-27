@@ -20,4 +20,6 @@ public class AuthenticationController {
     public String login(@RequestBody AuthRequest request) {
         return jwtUtil.generateToken(request.getUsername());
     }
+    
+    
 }
